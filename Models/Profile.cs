@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace PrototypeRazor.Models;
+namespace PrototypeRazorApp.Models;
 public class Profile
 {
     public int Id { get; set; }

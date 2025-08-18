@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using PrototypeRazor.Models;
+using PrototypeRazorApp.Models;
 
 namespace PrototypeRazorApp.Data
 {
@@ -10,6 +10,6 @@ namespace PrototypeRazorApp.Data
             : base(options)
         {
         }
-        public DbSet<PrototypeRazor.Models.Profile> Profile { get; set; } = default!;
+        public DbSet<PrototypeRazorApp.Models.Profile> Profile { get; set; } = default!;
     }
 }

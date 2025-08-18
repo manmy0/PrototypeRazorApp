@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using PrototypeRazor.Models;
+using PrototypeRazorApp.Models;
 using PrototypeRazorApp.Data;
 
 namespace PrototypeRazorApp.Pages.ProfilePage
