@@ -1,0 +1,48 @@
+﻿@page
+@model PrototypeRazorApp.Pages.DashboardPage.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Dashboard[0].Competency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dashboard[0].NumExamples)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dashboard[0].HighestLevel)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Dashboard) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Competency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumExamples)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HighestLevel)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

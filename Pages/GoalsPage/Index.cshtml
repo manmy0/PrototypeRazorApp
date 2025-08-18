@@ -1,0 +1,84 @@
+﻿@page
+@model PrototypeRazorApp.Pages.GoalsPage.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Goals[0].ProfessionalInterests)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Goals[0].EmployersOfInterest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Goals[0].PersonalValues)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Goals[0].DevelopmentFocus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Goals[0].SmartGoal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Goals[0].ActionSteps)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Goals[0].Timeline)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Goals[0].ProgressNotes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Goals[0].KeyLearnings)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Goals) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfessionalInterests)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployersOfInterest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonalValues)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DevelopmentFocus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SmartGoal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActionSteps)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Timeline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProgressNotes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KeyLearnings)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
