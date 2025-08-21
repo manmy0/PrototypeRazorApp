@@ -18,3 +18,12 @@
     margin-left: auto;
     margin-right: 0;
 }
+
+.chart {
+    width: 400px;
+    height: 400px;
+    margin-left: 800px;
+    bottom: 140px;
+    clear: both;
+    position: absolute
+}
