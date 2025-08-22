@@ -1,0 +1,49 @@
+﻿.my-box3 {
+    width: 500px; /* Sets the width of the box */
+    height: 200px; /* Sets the height of the box */
+    background-color: white; /* Sets the background color */
+    border: 2px solid black; /* Adds a border: width, style, color */
+    padding: 20px; /* Adds space between content and border */
+    margin: 10px; /* Adds space outside the border */
+    display: flex;
+   
+}
+
+.my-box2 {
+    width: 500px; /* Sets the width of the box */
+    height: 200px; /* Sets the height of the box */
+    background-color: white; /* Sets the background color */
+    border: 2px solid black; /* Adds a border: width, style, color */
+    padding: 20px; /* Adds space between content and border */
+    margin: 10px; /* Adds space outside the border */
+    display: flex;
+}
+
+.my-box1 {
+    width: 500px; /* Sets the width of the box */
+    height: 200px; /* Sets the height of the box */
+    background-color: white; /* Sets the background color */
+    border: 2px solid black; /* Adds a border: width, style, color */
+    padding: 20px; /* Adds space between content and border */
+    margin: 10px; /* Adds space outside the border */
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.my-box {
+    width: 500px; /* Sets the width of the box */
+    height: 200px; /* Sets the height of the box */
+    background-color: white; /* Sets the background color */
+    border: 2px solid black; /* Adds a border: width, style, color */
+    padding: 20px; /* Adds space between content and border */
+    margin: 10px; /* Adds space outside the border */
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.container {
+   display: flex;
+   gap: 20px;
+}

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PrototypeRazorApp.Data;
 
@@ -11,9 +12,11 @@ using PrototypeRazorApp.Data;
 namespace PrototypeRazorApp.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250822023656_UpdateCompAgain")]
+    partial class UpdateCompAgain
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -257,10 +260,16 @@ namespace PrototypeRazorApp.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("CompaniesContact")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Competency")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ElevatorPitch")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EvidenceLink")
@@ -272,7 +281,13 @@ namespace PrototypeRazorApp.Data.Migrations
                     b.Property<int>("Num")
                         .HasColumnType("int");
 
+                    b.Property<string>("Questions")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ReflectionLink")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpcomingEvents")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -350,28 +365,16 @@ namespace PrototypeRazorApp.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("CompaniesContact")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Company")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ContactInfo")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ElevatorPitch")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProgressNotes")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Questions")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UpcomingEvents")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
