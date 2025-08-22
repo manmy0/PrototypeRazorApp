@@ -5,68 +5,34 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 style="text-align: center;">Summary</h1>
+<br />
+<img src="@Model.Summary[0].ProfileImage" alt="Cage">
+<br />
+<h3 style="text-align: center;">@Model.Summary[0].Name</h3>
+<p style="text-align: center;">@Model.Summary[0].Title</p>
+<hr />
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Summary[0].Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summary[0].Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summary[0].ProfileImage)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summary[0].GoalsCompleted)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summary[0].NumConfidentCompentencies)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summary[0].NumEmergingCompentencies)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summary[0].LogbookCompleted)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Summary) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProfileImage)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GoalsCompleted)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumConfidentCompentencies)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumEmergingCompentencies)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LogbookCompleted)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<select class="form-select w-auto" name="select-year">
+    <option value="">-- Select Year --</option>
+    <option value="2020">2020</option>
+    <option value="2021">2021</option>
+    <option value="2022">2022</option>
+    <option value="2023">2023</option>
+    <option value="2024">2024</option>
+    <option value="2025">2025</option>
+</select>
+
+<br />
+
+<div class="my-box3">
+    <h3 style="text-align: center;">Stats</h3>
+    <div class="col">
+        <p>Goals Completed This Year: @Model.Summary[0].GoalsCompleted</p>
+        <p>Competencies Confident: @Model.Summary[0].NumConfidentCompentencies</p>
+        <p>Competencies Emerging: @Model.Summary[0].NumEmergingCompentencies</p>
+        <p>@Model.Summary[0].LogbookCompleted</p>
+    </div>
+
+</div>
+
