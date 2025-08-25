@@ -7,15 +7,18 @@
 
 <h1 style="text-align: center;">Summary</h1>
 
-<div style="display: flex; justify-content: flex-end;">
-    <a class="btn btn-primary" asp-page="/DashboardPage/Index">Back to Dashboard</a>
-</div>
 <br />
 <img src="@Model.Summary[0].ProfileImage" alt="Cage">
 <br />
 <h3 style="text-align: center;">@Model.Summary[0].Name</h3>
 <p style="text-align: center;">@Model.Summary[0].Title</p>
 <hr />
+
+<div style="display: flex; justify-content: flex-end;">
+    <a class="btn btn-primary" asp-page="/DashboardPage/Index">Back to Dashboard</a>
+</div>
+
+<br />
 
 <select class="form-select w-auto" name="select-year">
     <option value="">-- Select Year --</option>
@@ -38,5 +41,9 @@
         <p>@Model.Summary[0].LogbookCompleted</p>
     </div>
 
+</div>
+
+<div>
+    <a class="btn btn-secondary" style="text-align: center;" asp-page="/ExportPage/Index">Export</a>
 </div>
 
