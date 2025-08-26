@@ -27,45 +27,45 @@
 </ul>
 
 <br />
+<br />
 
-<div class="container">
-<label for="box3" style="display: flex; margin: 10px;">Elevator Pitch</label>
-<div class="my-box3">
-    <div class="col">
-      <p>@Model.Networking[0].ElevatorPitch</p>
+<div class="page-container">
+    <div class="column">
+        <div class="content-block">
+            <h4 class="box-title">Elevator Pitch</h4>
+            <div class="info-box">
+                <p>@Model.Networking[0].ElevatorPitch</p>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4 class="box-title">Networking Ice Breakers and Questions to Ask</h4>
+            <div class="info-box">
+                <p>@Model.Networking[0].Questions</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="column">
+        <div class="content-block">
+            <h4 class="box-title">Companies and Contacts of Interest</h4>
+            <div class="info-box">
+                <p>@Model.Networking[0].CompaniesContact</p>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4 class="box-title">Upcoming Events</h4>
+            <div class="info-box">
+                <p>@Model.Networking[0].UpcomingEvents</p>
+            </div>
+        </div>
     </div>
 </div>
 
 <br />
-
-<label for="box1" style="display: flex; margin: 10px; justify-content: flex-end;">Companies and Contacts of Interest</label>
-<div class="my-box1">
-    <div class="col">
-        <p>@Model.Networking[0].CompaniesContact</p>
-    </div>
-</div>
-
-</div>
-
-<br />
-<div class="container">
-<label for="my-box2" style="display: flex; margin: 10px;">Networking Ice Breakers and Questions to Ask</label>
-<div class="my-box2">
-    <div class="col">
-        <p>@Model.Networking[0].Questions</p>
-    </div>
-</div>
-
-<br />
-
-<label for="my-box" style="display: flex; margin: 10px;">Upcoming Events</label>
-<div class="my-box">
-    <div class="col">
-        <p>@Model.Networking[0].UpcomingEvents</p>
-    </div>
-</div>
-</div>
-
+<hr />
 <br />
 
 <h3>Industry Contact Log</h3>
@@ -89,21 +89,22 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Networking) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Company)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ContactInfo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProgressNotes)
-            </td>    
-        </tr>
-}
+        @foreach (var item in Model.Networking)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Company)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContactInfo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProgressNotes)
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
