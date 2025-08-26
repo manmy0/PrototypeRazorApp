@@ -17,3 +17,7 @@
     margin: 10px; /* Adds space outside the border */
     display: block;
 }
+
+select {
+    margin-bottom: 50px;
+}

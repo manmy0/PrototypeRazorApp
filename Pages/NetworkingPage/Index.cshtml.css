@@ -22,7 +22,6 @@
 .box-title {
     margin-bottom: 8px; 
     margin-left: 5px;
-    font-family: sans-serif;
-    font-weight: normal; 
+    font-weight: bold; 
     font-size: 20px;
 }
